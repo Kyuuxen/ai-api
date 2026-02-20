@@ -1,9 +1,8 @@
+export const runtime = "nodejs";
+
 export async function GET() {
-  return new Response(
-    JSON.stringify({
-      ok: true,
-      envKeyExists: !!process.env.GEMINI_API_KEY
-    }),
-    { status: 200 }
-  );
+  return new Response("API ALIVE", {
+    status: 200,
+    headers: { "Content-Type": "text/plain" }
+  });
 }
